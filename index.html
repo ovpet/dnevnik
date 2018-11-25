@@ -49,14 +49,11 @@
     document.getElementById('a').innerHTML = ia.value;
     document.getElementById('aa').innerHTML = ia.value;
 	xa=parseInt(ia.value, 10);
-	//bb.innerHTML = parseInt(ia.value, 10); 
 	bb.innerHTML = Math.pow(parseInt(ia.value, 10), xn);
   };
   inn.oninput = function() {
-    document.getElementById('n').innerHTML = inn.value;
-    document.getElementById('nn').innerHTML = inn.value;
-	//xn=parseInt(in.value, 10);
-	//bb.innerHTML = Math.pow(xa, xn);
+	document.getElementById('n').innerHTML = inn.value;
+    	document.getElementById('nn').innerHTML = inn.value;
 	xn=parseInt(inn.value, 10);
 	bb.innerHTML = Math.pow(xa, parseInt(inn.value, 10));
   };
