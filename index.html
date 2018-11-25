@@ -1,1 +1,65 @@
-"Test" 
+<!DOCTYPE html>
+ <html lang="ru">
+ <head>
+  <meta charset="utf-8">
+  <title>border-radius</title>
+  <style>
+   .rad, .rd {
+    background: #faf3d2; /* Цвет фона */
+    border: 1px solid black; /* Параметры рамки */
+    padding: 20px; /* Поля вокруг текста */
+	border-radius: 60% 40% 40% 60%/ 70% 30% 70% 30%;
+	text-align: center;
+	float: left; /* Обтекание по правому краю */
+	margin: 3px;
+   }
+   .rad{
+	width: 80px;
+    padding: 10px; /* Поля вокруг текста */	
+   }
+   .rad1 {
+   width: 100px;
+   float: none;
+   }
+   #ia, #in{
+   width: 40px;
+   }
+  </style>
+ </head> 
+ <body> 
+  <div class="rad">
+   b=a<sup>n</sup>
+  </div>
+  <div class="rd">
+	a=<span id="a">4</span> n=<span id="n">5</span><br>
+	<span id="aa">4</span><sup id="nn">5</sup>=<span id="bb">1024</span>
+  </div>
+  <div class="rad1">&nbsp;</div>
+
+  a= <input type="text" id="ia"><br>
+  n= <input type="text" id="in">
+  <script>
+  var ia = document.getElementById('ia');
+  var inn = document.getElementById('in');
+  var bb = document.getElementById('bb');
+  var xa=10;
+  var xn=2;
+
+  ia.oninput = function() {
+    document.getElementById('a').innerHTML = ia.value;
+    document.getElementById('aa').innerHTML = ia.value;
+	xa=parseInt(ia.value, 10);
+	//bb.innerHTML = parseInt(ia.value, 10); 
+	bb.innerHTML = Math.pow(parseInt(ia.value, 10), xn);
+  };
+  inn.oninput = function() {
+    document.getElementById('n').innerHTML = inn.value;
+    document.getElementById('nn').innerHTML = inn.value;
+	//xn=parseInt(in.value, 10);
+	//bb.innerHTML = Math.pow(xa, xn);
+	xn=parseInt(inn.value, 10);
+	bb.innerHTML = Math.pow(xa, parseInt(inn.value, 10));
+  };
+</script>
+ </body> 
+</html>
