@@ -1,2 +1,2 @@
 # dnevnik
-dnevnik.mos.ru
+gh-pages
