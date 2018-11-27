@@ -1,2 +1,2 @@
 # dnevnik
-gh-pages
+test gh-pages
