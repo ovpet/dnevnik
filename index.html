@@ -25,8 +25,21 @@
    width: 40px;
    }
   </style>
+  <script language="JavaScript" type="text/javascript">
+	var xa=4;
+	var xn=5;
+	function onl() {
+		xa=parseInt(document.getElementById('ia').value, 10);
+		xn=parseInt(document.getElementById('in').value, 10);
+		document.getElementById('a').innerHTML = xa;
+		document.getElementById('aa').innerHTML = xa;
+		document.getElementById('n').innerHTML = xn;
+		document.getElementById('nn').innerHTML = xn;
+		document.getElementById('bb').innerHTML = Math.pow(xa, xn);
+	}
+  </script>
  </head> 
- <body> 
+ <body onLoad="onl();"> 
   <div class="rad">
    b=a<sup>n</sup>
   </div>
@@ -42,8 +55,6 @@
   var ia = document.getElementById('ia');
   var inn = document.getElementById('in');
   var bb = document.getElementById('bb');
-  var xa=4;
-  var xn=5;
 
   ia.oninput = function() {
     document.getElementById('a').innerHTML = ia.value;
